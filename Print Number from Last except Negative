@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main
+{
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);
+		while(sc.hasNextInt())
+			num(sc);
+	}
+	public static void num(Scanner sc) {
+		int a=sc.nextInt();
+		if(a==-1)
+			return;
+		num(sc);
+		System.out.print(a+" ");
+	}
+}
+sample input:121 132 141 -1 
+sample output:141 132 121
