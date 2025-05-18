@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int rows = sc.nextInt();
+		int columns = sc.nextInt();
+		int[][] arr = new int[rows][columns];
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+				arr[i][j] = sc.nextInt();
+			}
+		}
+		 boolean is=true;
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < columns; j++) {
+			    if(i==j && arr[i][j]!=1)
+			    {
+			        is=false;
+			    }
+			    else if(i!=j && arr[i][j]!=0)
+			    {
+			        is=false;
+			    }
+			}
+		}
+		if(is){
+		    System.out.print("Identity");
+		}
+		else{
+		    System.out.print("Not");
+		}
+	}
+}
